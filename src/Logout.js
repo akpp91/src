@@ -1,5 +1,3 @@
-// Logout.js
-
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
@@ -7,9 +5,9 @@ function Logout() {
   const history = useHistory();
 
   useEffect(() => {
-    // Clear session storage and redirect to the login page
+    // Clear session storage and redirect to the home page
     sessionStorage.clear();
-    history.push('/login');
+    history.push('/Home'); // Redirect to the home page
   }, [history]);
 
   return (

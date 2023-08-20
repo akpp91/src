@@ -1,6 +1,9 @@
 import { Route } from "react-router-dom";
 
 
+// Use NormalRoute when you want to handle authorization based 
+// on user roles and show different components/messages 
+// for authorized and unauthorized users.
 
 function CheckUserRole(roleOfTheUser, path)
 {

@@ -37,13 +37,20 @@ const handleSignIn = (e) =>
         user.password === password
     );
   
-    if (isAdmin) {
+    if (isAdmin) 
+    {
       console.log("Admin authenticated!");
   
       // Set the user authentication status in session storage
       sessionStorage.setItem("isUserLoggedIn", "true");
-  
-      history.push("/Dashboard"); // Redirect to the Dashboard
+      if(props.path!=null && props.path!="/login")
+      {
+          history.push(props.path) //this is like take user to DB/profile
+      }
+      else
+      {
+          history.push("/home");  //this will execute when user asks for /login directly..
+      }
     } else {
       setError("Invalid username or password");
       console.log(error);

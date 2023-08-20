@@ -36,7 +36,7 @@ const Dashboard = () => {
   };
 
   const handleAddRoom = () => {
-    axios.post('http://192.168.0.100:4004/room/addroom', roomDetails)
+    axios.post('http://192.168.0.104:4000/room/addroom', roomDetails)
       .then(response => {
         console.log('Room added successfully:', response.data);
         showMessage("Room added successfully!", 3000);
@@ -83,7 +83,7 @@ const Dashboard = () => {
 
   const handleViewUserDetails = async () => {
     try {
-      const response = await axios.get(`http://192.168.0.100:4004/user/${userIdInput}`);
+      const response = await axios.get(`http://192.168.0.104:4000/user/${userIdInput}`);
       const userData = response.data.data;
       setUserDetails(userData);
       console.log("Viewing user details for user ID:", userIdInput);
@@ -99,7 +99,7 @@ const Dashboard = () => {
 
   const handleViewBookings = async () => {
     try {
-      const response = await axios.get("http://192.168.0.100:4004/reservation/bookings");
+      const response = await axios.get("http://192.168.0.104:4000/reservation/bookings");
       const bookingsData = response.data.data;
       setBookings(bookingsData);
       console.log("Viewing all bookings:");

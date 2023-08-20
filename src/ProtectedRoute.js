@@ -3,7 +3,13 @@ import React from "react"; // Don't forget to import React!
 import Login from "./Login";
 
 // Inside the ProtectedRoute component
-function ProtectedRoute(props) {
+
+// Use ProtectedRoute when you want 
+// to restrict access to certain routes to authenticated users 
+// and redirect them to a login page if they are not logged in.
+
+function ProtectedRoute(props) 
+{
   var isUserLoggedIn = sessionStorage.getItem('isUserLoggedIn');
 
   if (isUserLoggedIn != null && isUserLoggedIn === 'true') {
