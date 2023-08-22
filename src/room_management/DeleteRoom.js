@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { Navigate } from 'react-router-dom';
 
 function DeleteRoom() {
   const [roomIdToDelete, setRoomIdToDelete] = useState('');
@@ -18,7 +18,7 @@ function DeleteRoom() {
     room_size: ''
   });
 
-  const history = useHistory();
+  const history = Navigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

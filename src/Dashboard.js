@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Navigate } from "react-router-dom";
 
 const Dashboard = () => {
     // debugger;
@@ -20,7 +19,7 @@ const Dashboard = () => {
     room_size: ''
   });
   const [message, setMessage] = useState("");
-  const history = useHistory();
+  const history = Navigate();
 
   const handleLogout = () => {
     console.log("Admin logged out!");

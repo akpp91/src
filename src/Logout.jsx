@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 function Logout() {
-  const history = useHistory();
+  const history = Navigate();
 
   useEffect(() => {
     // Clear session storage and redirect to the home page
